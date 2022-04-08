@@ -1,4 +1,5 @@
 const express = require('express')
+const path = require('path')
 const app = express()
 
 const requireHTTPS = (req, res, next) => {
@@ -11,7 +12,7 @@ const requireHTTPS = (req, res, next) => {
 
 app.use(requireHTTPS)
 
-app.use(express.static('./dist/todo-angular/'))
+app.use(express.static('./build/'))
 
 app.get('/*', (req, res) => {
   res.sendFile('index.html', { root: 'build/' })
