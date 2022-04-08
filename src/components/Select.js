@@ -57,6 +57,7 @@ export default class Select extends React.Component {
         title={o.title}
         value={o.value}
         selected={currentOption.value === o.value}
+        onSelect={this.props.onSelect}
       />
     ))
 

@@ -4,6 +4,9 @@ module.exports = {
     extend: {
       transitionProperty: {
         'top': 'top'
+      },
+      screens: {
+        xs: '460px'
       }
     },
   },

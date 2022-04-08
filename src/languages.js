@@ -1,10 +1,10 @@
 export default [
   {
-    title: '🇷🇺 Русский',
+    title: '🇷🇺',
     value: 'ru',
   },
   {
-    title: '🇺🇸 English',
+    title: '🇺🇸',
     value: 'en',
   },
 ]

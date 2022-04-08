@@ -16,6 +16,7 @@ export default class SelectOption extends React.Component {
               : 'bg-gray-50 cursor-pointer'
           } 
         `}
+        onClick={() => this.props.onSelect(this.props.value)}
       >
         {this.props.title}
       </div>

@@ -6,12 +6,14 @@ export default class Card extends React.Component {
   }
 
   render() {
+    if (this.props.hidden) return null
+
     return (
       <div className="shadow-lg rounded-xl">
-        <div className="p-3 bg-blue-700 text-white text-xl rounded-t-xl">
+        <div className="p-3 bg-blue-700 text-white text-base xs:text-xl rounded-t-xl">
           {this.props.title}
         </div>
-        <div className="p-3 bg-white rounded-b-xl">{this.props.content}</div>
+        <div className="p-3 bg-white rounded-b-xl">{this.props.children}</div>
       </div>
     )
   }

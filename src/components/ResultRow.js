@@ -6,6 +6,8 @@ export default class ResultRow extends React.Component {
   }
 
   render() {
+    if (!this.props.value) return null
+
     return (
       <div>
         <div className="flex items-center justify-between h-12">

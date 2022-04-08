@@ -36,27 +36,34 @@ export default class Input extends React.Component {
   }
 
   render() {
+    const borderColorClass = this.props.error
+      ? 'border-red-600'
+      : this.state.focused
+      ? 'border-blue-600'
+      : 'border-gray-200'
+
+    const labelColorClass = this.props.error
+      ? 'text-red-600'
+      : this.state.focused
+      ? 'text-blue-600'
+      : 'text-gray-400'
+
     return (
       <div className="mb-3 w-full">
         <div
-          className={`h-12 p-2 border-gray-200 rounded relative transition-colors cursor-text
-            ${this.props.error ? 'border-2 border-red-600' : ''}
-            ${
-              this.state.focused
-                ? 'border-2 border-blue-600'
-                : 'border border-gray-200'
-            }
+          className={`h-12 p-2 rounded relative transition-colors cursor-text
+            ${borderColorClass}
+            ${this.state.focused ? 'border-2' : 'border'}
           `}
           onClick={this.onClickContainer}
         >
           <span
             className={`absolute left-3 transform transition-all top-1/2 pointer-events-none px-1
-              ${this.props.error ? 'text-red-600' : ''}
-              ${this.state.focused ? 'text-blue-600' : 'text-gray-400'}
+              ${labelColorClass}
               ${
                 this.state.focused || this.props.value
                   ? 'text-xs -translate-y-8 bg-white'
-                  : 'text-base -translate-y-1/2 bg-transparent'
+                  : 'text-sm xs:text-base -translate-y-1/2 bg-transparent'
               }
             `}
           >

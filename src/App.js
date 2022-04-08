@@ -1,11 +1,10 @@
-import Footer from './components/Footer'
+import React from 'react'
 import CalculatorPage from './components/CalculatorPage'
 
 function App() {
   return (
     <div className="text-gray-800 bg-gray-100">
       <CalculatorPage />
-      <Footer />
     </div>
   )
 }
